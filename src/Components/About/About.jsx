@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import mentorImage from "../../assets/images/image1.png"; // Replace with your image path
+import mentorImage from "../../assets/images/image4.png"; // Replace with your image path
 import img1 from "../../assets/images/icon-champion.png"; // Replace with your image path
 
 const About = () => {
