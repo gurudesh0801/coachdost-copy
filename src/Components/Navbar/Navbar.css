@@ -30,14 +30,6 @@
 }
 
 /* Logo styling */
-.navbar-logo a {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #1d3557; /* Deep, calming color */
-  text-decoration: none;
-  margin-left: 2rem;
-  font-family: "Poppins", sans-serif;
-}
 
 /* Center section for nav links */
 .navbar-center {
@@ -244,7 +236,13 @@
     gap: 2rem;
     display: none;
   }
+  .navbar-logo a {
+    margin-left: 0;
+  }
 
+  .navbar-left {
+    left: 0;
+  }
   .navbar-links.active {
     display: flex;
   }
