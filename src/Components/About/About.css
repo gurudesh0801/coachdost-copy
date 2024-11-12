@@ -1,13 +1,11 @@
 /* Main container for the mentor section */
 .mentor-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 2rem;
   font-family: "Sora", sans-serif;
   gap: 2rem; /* Adds spacing between image and content */
-  text-align: center;
 }
 
 /* Image wrapper with a placeholder background color */
@@ -20,7 +18,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem; /* Adds spacing for mobile layout */
 }
 
 /* Mentor image styling */
@@ -51,34 +48,27 @@
   transform: rotate(180deg);
   font-size: 12px;
   color: #333;
-  font-family: "Roboto", sans-serif;
 }
 
 /* Mentor content text area */
 .mentor-content {
-  max-width: 600px;
-  line-height: 1.5; /* Adjusted line height for better readability */
+  max-width: 500px;
+  line-height: 1.3; /* Adjusted line height for better readability */
   gap: 1.5rem; /* Adds spacing between text elements */
-  text-align: center; /* Ensure text is centered */
-  font-family: "Roboto", sans-serif;
 }
 
 /* Awards section with trophy icons */
 .mentor-awards {
   font-size: 2rem;
   display: flex;
-  justify-content: center;
   gap: 1rem;
-  align-items: center;
-  margin-top: 1rem;
 }
 
 /* Main heading styling */
 h2 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: #333;
   margin-bottom: 1rem; /* Adds spacing below the heading */
-  font-weight: 700;
 }
 
 /* Paragraph styling */
@@ -87,7 +77,6 @@ p {
   font-size: 1rem;
   line-height: 1.8;
   margin-top: 1rem;
-  font-family: "Roboto", sans-serif;
 }
 
 /* Button styling */
@@ -100,7 +89,6 @@ p {
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-family: "Roboto", sans-serif;
 }
 
 .mentor-button:hover {
@@ -111,7 +99,6 @@ p {
 @media (max-width: 1024px) {
   .mentor-section {
     padding: 1.5rem;
-    gap: 2rem;
   }
 
   .mentor-image-wrapper {
@@ -120,15 +107,11 @@ p {
   }
 
   .mentor-content h2 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 
   .mentor-content p {
-    font-size: 1rem;
-  }
-
-  .mentor-button {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -137,6 +120,11 @@ p {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;
+  }
+
+  .mentor-content {
+    margin-left: 0;
+    margin-top: 2rem;
   }
 
   .mentor-image-wrapper {
@@ -149,25 +137,20 @@ p {
   }
 
   .mentor-content p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
-
   .mentor-awards {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 1rem;
   }
-
   .mentor-awards span img {
-    width: 5rem;
-    height: 4rem;
+    width: 7rem;
+    height: 5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .mentor-section {
-    padding: 1rem;
-  }
-
   .mentor-image-wrapper {
     width: 100%;
   }
@@ -183,10 +166,5 @@ p {
   .mentor-button {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
-  }
-
-  .mentor-awards span img {
-    width: 6rem;
-    height: 5rem;
   }
 }
