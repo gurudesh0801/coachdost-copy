@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Loading from "./Components/Loading/Loading";
+import Signup from "./Components/Signup/Signup";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +23,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
           <Footer />
         </Router>
