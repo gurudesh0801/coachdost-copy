@@ -3,6 +3,7 @@
 import React from "react";
 import "./Home.css";
 import image from "../../assets/images/girlimg.png";
+import { FaUser } from "react-icons/fa";
 import About from "../About/About";
 import Sec2 from "../Sec2/Sec2";
 
@@ -19,9 +20,11 @@ const Home = () => {
             great things for you.
           </p>
           <div className="hero-buttons">
-            <button className="get-started">Get Started</button>
+            <button className="get-started">
+              <FaUser style={{ color: "#6e3cbc" }} /> Browse Coaches
+            </button>
             <button className="watch-video">
-              <span className="play-icon">▶</span> Watch Video
+              <span className="play-icon">▶</span> Get Demo
             </button>
           </div>
           <div className="hero-stats">
