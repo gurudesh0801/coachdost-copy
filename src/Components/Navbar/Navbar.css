@@ -5,17 +5,14 @@
   justify-content: space-around;
   align-items: center;
   padding: 1.3rem 2rem;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.792);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #0015ff;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom-left-radius: 4rem;
-  border-bottom-right-radius: 4rem;
 }
 .navbar-logo img {
   width: 10rem; /* Adjust as needed */
