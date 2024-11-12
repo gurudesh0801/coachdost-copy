@@ -1,28 +1,23 @@
-/* Body background */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 /* Main container */
 .signup-container {
-  background: url(../../assets/images/signup.png) rgb(147, 147, 255) no-repeat
-    center center;
-  background-size: cover;
   display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  background: #5d63cc center center;
+}
+.bgimg {
+  position: absolute;
+  height: 100vh;
+  width: 50%;
 }
 
 /* Left section */
 .leftcont {
-  width: 30%;
+  width: 40%;
   color: #fff;
   display: flex;
   flex-direction: column;
-  text-align: center;
   margin-right: 2rem;
   position: relative;
 }
@@ -30,24 +25,29 @@ body {
 .leftcont h1 {
   position: absolute;
   top: -20rem;
-  font-size: 2rem;
+  text-align: start;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
   line-height: 1.3;
+  font-family: "Sora", sans-serif;
+  margin-top: 2rem;
+  margin-left: 6rem;
+  z-index: 11;
 }
 
 .leftcont img {
   position: absolute;
-  top: -20rem;
-  left: 0rem;
-  width: 40rem;
-  height: 40rem;
+  top: -15rem;
+  left: 5rem;
+  width: 40.5rem;
+  height: 35.9rem;
+  z-index: 11;
 }
 
 /* Right section */
 .rightcont {
-  width: 70%;
-  height: 100vh; /* Full height */
+  width: 60%;
+  height: 100vh;
   background-color: #ffffff;
   padding: 2rem;
   border-top-left-radius: 2rem;
@@ -57,16 +57,25 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-y: auto; /* Add scrolling if content exceeds viewport */
+  overflow-y: auto;
+  z-index: 1;
 }
 
 .rightcont h2 {
   align-self: flex-start;
-  padding-left: 12rem;
+  padding-left: 9rem;
   margin-bottom: 2rem;
   font-size: 2rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Inter", sans-serif;
+  color: #5f5c5c;
+}
+
+/* Active role button style */
+.button-red.active,
+.button-blue.active {
+  opacity: 1;
+  background: rgb(202, 48, 48);
+  transform: scale(1.05);
 }
 
 /* Button group */
@@ -91,15 +100,15 @@ body {
 }
 
 .button-red {
-  background-color: #ff4d4d;
+  background-color: #004dd1;
 }
 
 .button-blue {
-  background-color: #4d79ff;
+  background-color: #004dd1;
 }
 
 .button-purple {
-  background-color: #7d4dff;
+  background-color: #000000;
 }
 
 /* Form styling */
@@ -118,15 +127,16 @@ body {
 .signup-form input {
   padding: 15px;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 2px solid #5f5c5c;
   border-radius: 5px;
   font-size: 1em;
+  font-family: "Inter", sans-serif;
 }
 
 /* Create account button */
 .create-account-button {
   padding: 15px;
-  background-color: #1a73e8;
+  background-color: #033f8c;
   color: white;
   border: none;
   border-radius: 5px;
@@ -167,7 +177,7 @@ body {
   text-align: center;
   border-radius: 5px;
   font-weight: bold;
-  width: 10rem;
+  width: 3rem;
 }
 
 .google-login {
@@ -192,7 +202,7 @@ body {
 
   .rightcont {
     width: 100%;
-    border-radius: 0; /* Remove border radius on small screens */
+    border-radius: 0;
     padding: 1.5rem;
   }
 
@@ -212,20 +222,30 @@ body {
   .signup-container {
     flex-direction: column;
     padding: 1rem;
+    background: url(../../assets/images/loginbg.png);
   }
-
   .rightcont {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 1rem;
     height: auto;
+    border-radius: 2rem;
   }
 
   .rightcont h2 {
     font-size: 1.5rem;
+    align-self: center;
   }
 
   .buttons {
     gap: 1rem;
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .button-red,
@@ -238,7 +258,9 @@ body {
   .signup-form {
     width: 100%;
   }
-
+  .bgimg {
+    display: none;
+  }
   .form-row {
     flex-direction: column;
     gap: 10px;
