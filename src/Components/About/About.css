@@ -6,69 +6,56 @@
   padding: 2rem;
   font-family: "Sora", sans-serif;
   gap: 2rem; /* Adds spacing between image and content */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Image wrapper with a placeholder background color */
+/* Image wrapper */
 .mentor-image-wrapper {
-  position: relative;
-  width: 518px;
-  height: 638px;
+  width: 30%; /* Make the image take up half the space */
+  height: 400px;
   background-color: #d3d3d3;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* Mentor image styling */
 .mentor-image {
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%; /* Ensure image fills the container */
+  object-fit: contain; /* Ensures image fits within the container without cropping */
   border-radius: 8px;
-}
-
-/* Circular text overlay in the middle of the image */
-.mentor-text-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid #5b3fe3;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mentor-text-circle span {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  font-size: 12px;
-  color: #333;
 }
 
 /* Mentor content text area */
 .mentor-content {
-  max-width: 500px;
-  line-height: 1.3; /* Adjusted line height for better readability */
-  gap: 1.5rem; /* Adds spacing between text elements */
+  width: 50%; /* Make the content take up half the space */
+  max-width: 600px;
+  line-height: 1.5; /* Adjusted line height for better readability */
+  gap: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  text-align: left; /* Align text to the left */
 }
 
-/* Awards section with trophy icons */
+/* Circular awards icon styling */
 .mentor-awards {
   font-size: 2rem;
   display: flex;
+  justify-content: flex-start;
   gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 /* Main heading styling */
 h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #333;
   margin-bottom: 1rem; /* Adds spacing below the heading */
+  font-weight: 700;
 }
 
 /* Paragraph styling */
@@ -77,6 +64,7 @@ p {
   font-size: 1rem;
   line-height: 1.8;
   margin-top: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Button styling */
@@ -89,6 +77,7 @@ p {
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: "Roboto", sans-serif;
 }
 
 .mentor-button:hover {
@@ -99,37 +88,48 @@ p {
 @media (max-width: 1024px) {
   .mentor-section {
     padding: 1.5rem;
+    flex-direction: column; /* Stack the content on smaller screens */
+    gap: 1rem; /* Reduce gap between image and content */
   }
 
   .mentor-image-wrapper {
-    width: 400px;
-    height: 500px;
+    width: 80%; /* Reduce image width on tablets */
+    height: 300px;
+  }
+
+  .mentor-content {
+    width: 80%; /* Adjust content width to match image on tablets */
+    text-align: center; /* Center text */
   }
 
   .mentor-content h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .mentor-content p {
-    font-size: 0.95rem;
+    font-size: 1rem;
+  }
+
+  .mentor-button {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .mentor-section {
-    flex-direction: column;
-    text-align: center;
     padding: 1.5rem;
-  }
-
-  .mentor-content {
-    margin-left: 0;
-    margin-top: 2rem;
+    flex-direction: column; /* Stack the content */
+    gap: 2rem;
   }
 
   .mentor-image-wrapper {
-    width: 80%;
-    height: auto;
+    width: 80%; /* Image should be full width on small screens */
+    height: 250px;
+  }
+
+  .mentor-content {
+    width: 80%; /* Content should match the image width */
+    text-align: center; /* Center content on smaller screens */
   }
 
   .mentor-content h2 {
@@ -137,22 +137,27 @@ p {
   }
 
   .mentor-content p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
+
   .mentor-awards {
-    display: flex;
-    align-items: center;
     justify-content: center;
+    gap: 1rem;
   }
+
   .mentor-awards span img {
-    width: 7rem;
-    height: 5rem;
+    width: 5rem;
+    height: 4rem;
   }
 }
 
 @media (max-width: 480px) {
+  .mentor-section {
+    padding: 1rem;
+  }
+
   .mentor-image-wrapper {
-    width: 100%;
+    width: 100%; /* Image should take full width on very small screens */
   }
 
   .mentor-content h2 {
@@ -166,5 +171,10 @@ p {
   .mentor-button {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+  }
+
+  .mentor-awards span img {
+    width: 4rem;
+    height: 3rem;
   }
 }
