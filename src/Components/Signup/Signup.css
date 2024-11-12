@@ -1,14 +1,14 @@
 /* Body background */
 body {
-  background: url(../../assets/images/signup.png) rgb(147, 147, 255) no-repeat
-    center center;
-  background-size: cover;
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
 /* Main container */
 .signup-container {
+  background: url(../../assets/images/signup.png) rgb(147, 147, 255) no-repeat
+    center center;
+  background-size: cover;
   display: flex;
   min-height: 100vh;
   align-items: center;
