@@ -9,11 +9,10 @@ const About = () => {
       <div className="mentor-image-wrapper">
         <img src={mentorImage} alt="Mentor" className="mentor-image" />
       </div>
-
       <div className="mentor-content">
         <div className="mentor-awards">
           <span role="img" aria-label="trophy">
-            <img src={img1} alt="" />
+            <img src={img1} alt="Award Icon" />
           </span>
         </div>
         <h2>Learn With Our Best Mentor</h2>
