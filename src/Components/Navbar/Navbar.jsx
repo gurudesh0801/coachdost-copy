@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import logo from "../../assets/images/logo.png";
 import "./Navbar.css";
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,6 +22,10 @@ const Navbar = () => {
     event.preventDefault();
     console.log("Searching for:", searchQuery);
     setIsSearchOpen(false); // Close the search pop-up after search
+  };
+
+  const goto = () => {
+    navigate("/signup");
   };
 
   return (
@@ -55,7 +60,9 @@ const Navbar = () => {
           <FiSearch size={25} color="#1d3557" />
         </button>
         <button className="navbar-login">Login</button>
-        <button className="navbar-signup">Sign Up</button>
+        <button onClick={goto} className="navbar-signup">
+          Sign Up
+        </button>
       </div>
 
       <div className="navbar-menu-icon" onClick={toggleMenu}>
