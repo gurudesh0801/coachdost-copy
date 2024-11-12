@@ -20,6 +20,7 @@
   height: auto;
   max-height: 100px;
   object-fit: contain;
+  margin-left: 1rem;
 }
 
 .navbar-left {
@@ -221,6 +222,9 @@
 
 /* Responsive styling */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
   .navbar-links {
     position: absolute;
     top: 60px;
@@ -239,6 +243,9 @@
     display: flex;
   }
 
+  .navbar-logo img {
+    margin-left: 0;
+  }
   .navbar-menu-icon {
     display: block;
   }
