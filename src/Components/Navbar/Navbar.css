@@ -2,10 +2,10 @@
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 1.3rem 2rem;
-  background: rgba(255, 255, 255, 0.792);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -14,14 +14,14 @@
   top: 0;
   z-index: 100;
 }
+
 .navbar-logo img {
-  width: 10rem; /* Adjust as needed */
+  width: 10rem;
   height: auto;
-  max-height: 100px; /* Keep logo within the navbar's height */
-  object-fit: contain; /* Ensures the logo keeps its aspect ratio */
+  max-height: 100px;
+  object-fit: contain;
 }
 
-/* Left section for logo */
 .navbar-left {
   display: flex;
   align-items: center;
@@ -29,13 +29,10 @@
   left: 2rem;
 }
 
-/* Logo styling */
-
-/* Center section for nav links */
 .navbar-center {
   flex-grow: 1;
   display: flex;
-  justify-content: center; /* Center the nav links */
+  justify-content: center;
 }
 
 .navbar-links {
@@ -50,14 +47,13 @@
   color: #1d3557;
   text-decoration: none;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-  color: #ffc800; /* Soft orange for a subtle emphasis */
+  color: #ffc800;
 }
-/* Search Navbar */
 
 .navbar-search-icon {
   background: none;
@@ -67,7 +63,7 @@
   color: #1d3557;
 }
 
-/* Enhanced Search Pop-up Styling */
+/* Enhanced Search Pop-up */
 .search-popup {
   position: fixed;
   top: 0;
@@ -144,7 +140,6 @@
   background-color: #0056b3;
 }
 
-/* Close button styling */
 .close-popup {
   position: absolute;
   top: 1.5rem;
@@ -161,13 +156,16 @@
   color: #ff5a2c;
 }
 
-/* Right section for login and signup */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 1rem;
   position: absolute;
   right: 4rem;
+}
+.navbar-login-signup {
+  display: flex;
+  gap: 1rem;
 }
 
 .navbar-login,
@@ -177,37 +175,37 @@
   font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar-login {
   background-color: transparent;
   color: #000000;
   transition: background-color 0.3s, color 0.3s;
+  border: 1px solid #501cb7;
 }
 
 .navbar-login:hover {
-  transition: 1s;
-  /* transform: scale(1.1); */
-  background-color: #b20000;
+  background-color: #501cb7;
   cursor: pointer;
+  color: #eaeaea;
+  border: 1px solid #501cb7;
 }
 
 .navbar-signup {
   background-color: transparent;
   color: #ff6a00;
   transition: background-color 0.3s, color 0.3s;
+  border: 1px solid#ff5a2c;
 }
 
 .navbar-signup:hover {
-  transition: 0.5s;
-  /* transform: scale(1.1); */
-  color: #000000;
+  color: #f8f8f8;
   cursor: pointer;
-  background-color: #ff977b;
+  background-color: #ff5424;
+  border: 1px solid#ff5a2c;
 }
 
-/* Menu icon for mobile */
 .navbar-menu-icon {
   display: none;
   cursor: pointer;
@@ -229,20 +227,14 @@
     left: 0;
     width: 100%;
     height: calc(100vh - 60px);
-    background-color: #ffffff; /* Background matches gradient */
+    background-color: #ffffff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     display: none;
   }
-  .navbar-logo a {
-    margin-left: 0;
-  }
 
-  .navbar-left {
-    left: 0;
-  }
   .navbar-links.active {
     display: flex;
   }
@@ -252,6 +244,29 @@
   }
 
   .navbar-right {
-    display: none;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-login,
+  .navbar-signup {
+    width: 100%;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .navbar-search-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-logo a {
+    margin-left: 0;
+  }
+  .navbar-left {
+    left: 0;
   }
 }
