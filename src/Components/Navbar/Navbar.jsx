@@ -64,7 +64,7 @@ const Navbar = () => {
 
       <div className="navbar-right">
         <button onClick={toggleSearch} className="navbar-search-icon">
-          <FiSearch color="#1d3557" />
+          <FiSearch style={{ marginRight: "1.5rem" }} color="#1d3557" />
         </button>
       </div>
 
