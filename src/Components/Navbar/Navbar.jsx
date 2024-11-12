@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="navbar-left">
         <div className="navbar-logo">
           <Link to="/">
-            <img src={logo} alt="" />
+            <img src={logo} alt="Logo" />
           </Link>
         </div>
       </div>
@@ -52,16 +52,19 @@ const Navbar = () => {
           <li>
             <Link to="#appointment">Appointment</Link>
           </li>
+          {/* Login and Signup in toggle menu */}
+          <li className="navbar-login-signup">
+            <button className="navbar-login">Login</button>
+            <button onClick={goto} className="navbar-signup">
+              Sign Up
+            </button>
+          </li>
         </ul>
       </div>
 
       <div className="navbar-right">
         <button onClick={toggleSearch} className="navbar-search-icon">
-          <FiSearch size={25} color="#1d3557" />
-        </button>
-        <button className="navbar-login">Login</button>
-        <button onClick={goto} className="navbar-signup">
-          Sign Up
+          <FiSearch color="#1d3557" />
         </button>
       </div>
 
