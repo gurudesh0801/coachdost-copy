@@ -276,4 +276,31 @@
   .navbar-left {
     left: 0;
   }
+  .search-popup-form {
+    flex-direction: column;
+    padding: 1rem;
+    width: 90%;
+    max-width: 350px;
+    transform: scale(1);
+    animation: none; /* Remove animation for smoother experience on mobile */
+  }
+
+  .search-popup-form input {
+    margin: 0 0 1rem 0; /* Stack the input and button vertically */
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .search-popup-form button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  /* Adjust close button positioning for mobile */
+  .close-popup {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+  }
 }
