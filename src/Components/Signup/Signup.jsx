@@ -73,7 +73,7 @@ function Signup() {
         <p className="login-text">
           Already have an account? <Link to="/login">login</Link>
         </p>
-
+          <span>OR</span>
         <div className="social-login">
           <button className="google-login">
             <SiGoogle color="#db4437" />
