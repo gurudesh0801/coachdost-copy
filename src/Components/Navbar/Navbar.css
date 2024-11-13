@@ -5,10 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.3rem 2rem;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #ffff;
   color: #0015ff;
   position: sticky;
   top: 0;
