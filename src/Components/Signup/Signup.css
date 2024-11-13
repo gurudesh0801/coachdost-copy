@@ -56,15 +56,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   overflow-y: auto;
   z-index: 1;
 }
 
-.rightcont h2 {
-  align-self: flex-start;
-  padding-left: 9rem;
+.rightcont .text-div {
+  width: 60%;
   margin-bottom: 2rem;
+  color: #5f5c5c;
+}
+.rightcont .text-div h2 {
+  display: flex;
+  align-self: flex-start;
   font-size: 2rem;
   font-family: "Inter", sans-serif;
   color: #5f5c5c;
@@ -210,7 +214,7 @@ span {
   }
 
   .rightcont h2 {
-    padding-left: 0;
+    padding-left: 9rem;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
