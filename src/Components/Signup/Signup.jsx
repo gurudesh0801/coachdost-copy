@@ -33,7 +33,9 @@ function Signup() {
         <img src={img} alt="Signup illustration" />
       </div>
       <div className="rightcont">
-        <h2>Create Account</h2>
+        <div className="text-div">
+          <h2>Create Account</h2>
+        </div>
 
         {/* Role selection buttons */}
         <div className="buttons">
@@ -73,7 +75,7 @@ function Signup() {
         <p className="login-text">
           Already have an account? <Link to="/login">login</Link>
         </p>
-          <span>OR</span>
+        <span>OR</span>
         <div className="social-login">
           <button className="google-login">
             <SiGoogle color="#db4437" />
