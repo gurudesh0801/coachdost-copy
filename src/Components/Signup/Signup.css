@@ -151,8 +151,11 @@
   text-align: center;
   font-size: 0.9em;
   color: #555;
+  font-family: "Sora", sans-serif;
 }
-
+span {
+  font-family: "Sora", sans-serif;
+}
 .login-text a {
   color: #1a73e8;
   text-decoration: none;
